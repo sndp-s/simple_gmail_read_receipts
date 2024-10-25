@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Email open Tracker",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://mail.google.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
